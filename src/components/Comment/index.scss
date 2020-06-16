@@ -1,0 +1,41 @@
+.comment{
+  width: 980px;
+  height: 400px;
+  border: 1px solid #ccc;
+  .title {
+    line-height: 30px;
+  }
+  .demo {
+    width: 40%;
+    overflow: hidden;
+    padding: 10px 10px;
+    border-right: 1px solid #ccc;
+    .comment-input {
+      .comment-field{
+        margin-bottom: 15px;
+        .comment-field-name{
+          width: 90px;
+        }
+        .comment-field-input {
+          flex: 1 auto;
+          padding-right: 5px;
+          input,textarea {
+            width: 100%;
+          }
+        }
+      }
+      .comment-field-button {
+        text-align: right;
+      }
+    }
+  }
+  
+  .detail{
+    width: 60%;
+    padding: 10px 10px;
+    li {
+      line-height: 30px
+    }
+  }
+
+}

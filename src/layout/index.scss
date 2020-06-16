@@ -1,0 +1,51 @@
+.container{
+  height: 100%;
+}
+
+.sidebar {
+  .log{
+    width: 200px;
+    height: 64px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    img {
+      height: 100%;
+      margin: auto
+    }
+  }
+}
+
+.ant-layout{
+  overflow: hidden;
+  height: 100%;
+}
+
+.ant-layout-header {
+  background:#1D7EC8 !important;
+  color: #fff !important;
+  .userInfo{
+    line-height: 64px;
+    color: #fff !important;
+    float: right;
+  }
+}
+
+.ant-layout-content{
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+  .content {
+    // height: 100%;
+    min-height: calc(100% - 70px);
+    padding: 10px;
+    background: #fff;
+  }
+}
+
+.ant-layout-footer{
+  text-align: center;
+}

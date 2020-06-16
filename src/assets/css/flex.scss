@@ -1,0 +1,7 @@
+.flexContainer{
+  overflow: hidden;
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row !important;
+  -ms-flex-direction: row !important;
+}

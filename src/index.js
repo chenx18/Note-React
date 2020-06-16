@@ -1,17 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDom from 'react-dom'
+import App from './App'
+import "./assets/css/index.css"
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//引入ant-design样式
+import 'antd/dist/antd.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// 用React的语法把APP模块渲染到了root ID上面.这个rootID是在public\index.html文件中的。
+ReactDom.render(<App />, document.getElementById('root'))
+
