@@ -24,7 +24,6 @@ class Layouts extends Component {
   }
 
   render() {
-    console.log(this.props)
     const data = routes[1].children
     const { Header, Footer, Sider, Content } = Layout;
     return (

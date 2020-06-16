@@ -56,6 +56,11 @@
   - [react引入渲染markdown文件](https://blog.csdn.net/M_Eve/article/details/105614726)
 
 #### 11. redux react-redux redux-saga redux-thunk
+  - cnpm install --save redux
+  - cnpm install --save react-redux
+  - cnpm install --save redux-thunk
+  - cnpm install --save redux-saga
+  
 
 
   

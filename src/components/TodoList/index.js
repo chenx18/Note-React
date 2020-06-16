@@ -1,6 +1,7 @@
 import './index.scss';
 
 import React, {Component, Fragment} from 'react'
+import store from '@/store/index'
 
 class TodoList extends Component{
   // js的构造函数，由于其他任何函数执行
@@ -10,6 +11,7 @@ class TodoList extends Component{
       inputValue: '',
       list:[]
     }
+    console.log(store.getState())
   }
   // 输入监听
   inputChange = (e) =>{
