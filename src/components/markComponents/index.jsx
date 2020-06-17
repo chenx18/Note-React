@@ -31,7 +31,6 @@ class MarkApp extends Component {
           escapeHtml={false}
           renderers={{
             code: CodeBlock,
-            heading: HeadingBlock
           }}/>
       }
       </div>

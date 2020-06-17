@@ -24,7 +24,7 @@ class CommentApp extends Component {
   render() { 
     const { comments } = this.state;
     return (
-      <div className="comment flexContainer">
+      <div className="content flexContainer">
         <div className="demo">
           <h4 className="title">评论功能</h4>
           <CommentInput onSubmit={this.handleSubmit}/>

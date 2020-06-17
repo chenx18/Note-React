@@ -1,0 +1,30 @@
+.demo_lt{
+  .title {
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+.book-list{
+  margin-top: 10px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  .item {
+    padding: 10px 0px;
+    border-bottom: 1px dashed #ccc;
+    .title_box{
+      span{
+        &:first-child{
+          width: 80%;
+          overflow: hidden;
+        }
+        &:last-child{
+          cursor: pointer;
+          float: right;
+          &:hover{
+            color: red
+          }
+        }
+      }
+    }
+  }
+}

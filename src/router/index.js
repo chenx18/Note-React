@@ -25,32 +25,51 @@ export let routes = [
         children: []
       },
       {
-        path: "/operation",
-        name: "operation",
-        menuName: '运营管理',
-        Icon:'vk-home',
-        auth: true,
-        children: [
-          { 
-           path: "/comment",
-            name: "comment",
-            component: AsyncComponent(() => import('../components/Comment/CommentApp')),
-            menuName: '评论',
-            Icon:'vk-home',
-            auth: true,
-            children:[]
-          }
-        ]
-      },
-      {
         path: "/todolist",
         name: "todolist",
         component: AsyncComponent(() => import('../components/TodoList')),
-        menuName: 'Todo',
+        menuName: '事件',
         Icon:'vk-home',
         auth: true,
         children: []
       },
+      { 
+        path: "/comment",
+        name: "comment",
+        component: AsyncComponent(() => import('../components/Comment/CommentApp')),
+        menuName: '组件',
+        Icon:'vk-home',
+        auth: true,
+        children:[]
+      },
+      {
+        path: "/operation",
+        name: "operation",
+        menuName: '状态管理',
+        Icon:'vk-home',
+        auth: true,
+        children: [
+          {
+            path: "/books",
+            name: "BookLsit",
+            component: AsyncComponent(() => import('@/pages/Books')),
+            menuName: 'Redux',
+            Icon:'vk-home',
+            auth: true,
+            children: []
+          },
+          {
+            path: "/react-redux",
+            name: "React-Redux",
+            component: AsyncComponent(() => import('@/pages/ReactRedux')),
+            menuName: 'React-Redux',
+            Icon:'vk-home',
+            auth: true,
+            children: []
+          },
+        ]
+      },
+      
     ]
   },
   {

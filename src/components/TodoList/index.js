@@ -3,6 +3,9 @@ import './index.scss';
 import React, {Component, Fragment} from 'react'
 import store from '@/store/index'
 
+import MarkComponents from '@/components/markComponents'
+import md from '@/assets/notes/10.Reudx.md'
+
 class TodoList extends Component{
   // js的构造函数，由于其他任何函数执行
   constructor(props) {
@@ -80,29 +83,42 @@ class TodoList extends Component{
     console.log('7. componentWillUnmount----组件将要卸载')
   }
 
+  // 渲染列表
+  renderList = () => {
+    const { list } = this.state;
+    return (
+      <ul>
+        {
+          list.map((item, i) => {
+            return (
+              <li key={i}>
+                {item}   
+                <span onClick={() => this.delItem(i)}> Del</span>
+              </li>
+            )
+          })
+        }
+      </ul>
+    )
+  }
+  
   render(){
     console.log('render---组件挂载中.......')
     const { inputValue, list } = this.state;
     return (
-      <div className="todo-content">
+      <div className="content demo flexContainer">
         {/* jsx 正确注释的写法 */}
-        <h5> TodoList 《基础语法，事件绑定，条件渲染, 生命周期》 </h5>
-        <div >
-          <input type="text" value={inputValue} onChange={this.inputChange}/>
-          <button onClick={this.addList}>增加</button>
+        <div className="demo_lt">
+          <h5> TodoList 《基础语法，事件绑定，条件渲染, 生命周期》 </h5>
+          <div >
+            <input type="text" value={inputValue} onChange={this.inputChange}/>
+            <button onClick={this.addList}>增加</button>
+          </div>
+          {this.renderList()}
         </div>
-        <ul>
-          {
-            list.map((item, i) => {
-              return (
-                <li key={i}>
-                  {item}   
-                  <span onClick={() => this.delItem(i)}> Del</span>
-                </li>
-              )
-            })
-          }
-        </ul>
+        <div className="demo_rt">
+          <MarkComponents markPath={md} />
+        </div>
       </div>
     )
   }
