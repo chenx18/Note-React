@@ -3,7 +3,7 @@ import { Progress } from 'antd';
 import BookInput from './bookInput';
 
 import store from '@/store'
-import { deleteItemAction } from '@/store/actions/actionCreatores'
+import { deleteItemAction } from '@/store/actions/bookAction'
 
 
 
@@ -11,14 +11,14 @@ class BookList extends Component {
   constructor(props){
     super(props)
     this.state = {
-      ...store.getState()
+      ...store.getState().books
     }
     store.subscribe(this.storeChange)   //订阅Redux的状态
   }
 
   // 监听 store 变化
   storeChange = () => {
-    const {bookList} = store.getState()
+    const {bookList} = store.getState().books
     this.setState({
       bookList
     })

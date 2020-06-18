@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Input,Button } from 'antd';
 
 import store from '@/store'
-import { addItemAction } from '@/store/actions/actionCreatores'
+import { addItemAction } from '@/store/actions/bookAction'
 
 import './index.scss';
 

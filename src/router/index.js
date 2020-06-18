@@ -52,7 +52,7 @@ export let routes = [
           {
             path: "/books",
             name: "BookLsit",
-            component: AsyncComponent(() => import('@/pages/Books')),
+            component: AsyncComponent(() => import('@/pages/ReduxManage/Books')),
             menuName: 'Redux',
             Icon:'vk-home',
             auth: true,
@@ -61,8 +61,17 @@ export let routes = [
           {
             path: "/react-redux",
             name: "React-Redux",
-            component: AsyncComponent(() => import('@/pages/ReactRedux')),
+            component: AsyncComponent(() => import('@/pages/ReduxManage/Music')),
             menuName: 'React-Redux',
+            Icon:'vk-home',
+            auth: true,
+            children: []
+          },
+          {
+            path: "/redux-thunk",
+            name: "Redux-thunk",
+            component: AsyncComponent(() => import('@/pages/ReduxManage/Thunks')),
+            menuName: 'Redux-thunk',
             Icon:'vk-home',
             auth: true,
             children: []
