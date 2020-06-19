@@ -1,28 +1,20 @@
 import React, { Component } from 'react';
-
+import TodoList from '@/components/TodoList'
 import MarkComponents from '@/components/markComponents'
-import md from '@/assets/notes/10.状态管理（redux）/1.Reudx.md'
+import md from '@/assets/notes/07.生命周期.md'
 
-import BookList from './bookList';
-import './index.scss';
-
-
-class Books extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-    }
-  }
+class LifeCycle extends Component {
+  state = {  }
   render() { 
     return ( 
       <div className="content demo flexContainer">
-        <BookList />
+        <TodoList />
         <div className="demo_rt">
           <MarkComponents markPath={md} />
         </div>
       </div>
-     );
+    );
   }
 }
  
-export default Books;
+export default LifeCycle;

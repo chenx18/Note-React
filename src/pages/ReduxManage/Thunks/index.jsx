@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import MarkComponents from '@/components/markComponents'
-import md from '@/assets/notes/12.Redux-thunk.md'
+import md from '@/assets/notes/10.状态管理（redux）/3.Redux-thunk.md'
 
 
 class ReactRedux extends Component {

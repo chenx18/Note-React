@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MarkApp from '@/components/markComponents'
-import md from '@/assets/notes/1.环境搭建.md'
+import md from '@/assets/notes/01.环境搭建.md'
 
 class Home extends Component {
   constructor(props) {

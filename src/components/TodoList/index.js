@@ -1,10 +1,6 @@
-import './index.scss';
 
 import React, {Component, Fragment} from 'react'
 import store from '@/store/index'
-
-import MarkComponents from '@/components/markComponents'
-import md from '@/assets/notes/10.Reudx.md'
 
 class TodoList extends Component{
   // js的构造函数，由于其他任何函数执行
@@ -106,19 +102,14 @@ class TodoList extends Component{
     console.log('render---组件挂载中.......')
     const { inputValue, list } = this.state;
     return (
-      <div className="content demo flexContainer">
+      <div className="demo_lt">
         {/* jsx 正确注释的写法 */}
-        <div className="demo_lt">
-          <h5> TodoList 《基础语法，事件绑定，条件渲染, 生命周期》 </h5>
-          <div >
-            <input type="text" value={inputValue} onChange={this.inputChange}/>
-            <button onClick={this.addList}>增加</button>
-          </div>
-          {this.renderList()}
+        <h5> TodoList </h5>
+        <div >
+          <input type="text" value={inputValue} onChange={this.inputChange}/>
+          <button onClick={this.addList}>增加</button>
         </div>
-        <div className="demo_rt">
-          <MarkComponents markPath={md} />
-        </div>
+        {this.renderList()}
       </div>
     )
   }

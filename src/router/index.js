@@ -1,51 +1,105 @@
-import AsyncComponent from '../untils/asyncComponent';
-import Api from './../api/user';
+import AsyncComponent from '@/untils/asyncComponent';
+import Api from '@/api/user';
 
 // 静态路由
 export let routes = [
   {
     path: "/login",
     name: "Login",
-    component: AsyncComponent(() => import('../pages/Login/login')),
+    component: AsyncComponent(() => import('@/pages/Login/login')),
     auth: false
   },
   {
     path: "/",
     name: "index",
-    component: AsyncComponent(() => import('../layout')),
+    component: AsyncComponent(() => import('@/layout')),
     auth: true,
     children: [
       {
         path: "/home",
-        name: "home",
-        component: AsyncComponent(() => import('../pages/Home/home')),
+        name: "Home",
+        component: AsyncComponent(() => import('@/pages/Home/home')),
         menuName: '主页',
         Icon:'vk-home',
         auth: false,
         children: []
       },
       {
-        path: "/todolist",
-        name: "todolist",
-        component: AsyncComponent(() => import('../components/TodoList')),
-        menuName: '事件',
+        path: "/base",
+        name: "Base",
+        component: AsyncComponent(() => import('@/pages/Base')),
+        menuName: '基础',
         Icon:'vk-home',
-        auth: true,
+        auth: false,
         children: []
       },
-      { 
-        path: "/comment",
-        name: "comment",
-        component: AsyncComponent(() => import('../components/Comment/CommentApp')),
-        menuName: '组件',
+      {
+        path: "/events",
+        name: "Events",
+        component: AsyncComponent(() => import('@/pages/Events')),
+        menuName: '事件',
         Icon:'vk-home',
-        auth: true,
-        children:[]
+        auth: false,
+        children: []
+      },
+      {
+        path: "/dataStream",
+        name: "DataStream",
+        component: AsyncComponent(() => import('@/pages/DataStream')),
+        menuName: '数据流向',
+        Icon:'vk-home',
+        auth: false,
+        children: []
+      },
+      {
+        path: "/formEvent",
+        name: "FormEvent",
+        component: AsyncComponent(() => import('@/pages/FormEvent')),
+        menuName: '表单处理',
+        Icon:'vk-home',
+        auth: false,
+        children: []
+      },
+      {
+        path: "/DOMRef",
+        name: "DOMRef",
+        component: AsyncComponent(() => import('@/pages/DOMRef')),
+        menuName: 'DOM节点',
+        Icon:'vk-home',
+        auth: false,
+        children: []
+      },
+      {
+        path: "/lifeCycle",
+        name: "LifeCycle",
+        component: AsyncComponent(() => import('@/pages/LifeCycle')),
+        menuName: '生命周期',
+        Icon:'vk-home',
+        auth: false,
+        children: []
+      },
+      {
+        path: "/componentAC",
+        name: "ComponentAC",
+        component: AsyncComponent(() => import('@/pages/ComponentAC')),
+        menuName: '组件通信',
+        Icon:'vk-home',
+        auth: false,
+        children: []
+      },
+      {
+        path: "/routConfing",
+        name: "RoutConfing",
+        component: AsyncComponent(() => import('@/pages/RoutConfing')),
+        menuName: '路由配置',
+        Icon:'vk-home',
+        auth: false,
+        children: []
       },
       {
         path: "/operation",
         name: "operation",
-        menuName: '状态管理',
+        menuName: '状态管理（redux）',
         Icon:'vk-home',
         auth: true,
         children: [
@@ -78,13 +132,30 @@ export let routes = [
           },
         ]
       },
-      
+      {
+        path: "/axios-view",
+        name: "AxiosView",
+        component: AsyncComponent(() => import('@/pages/AxiosView')),
+        menuName: 'Axios使用',
+        Icon:'vk-home',
+        auth: false,
+        children: []
+      },
+      // { 
+      //   path: "/comment",
+      //   name: "comment",
+      //   component: AsyncComponent(() => import('../components/Comment/CommentApp')),
+      //   menuName: '组件',
+      //   Icon:'vk-home',
+      //   auth: true,
+      //   children:[]
+      // }
     ]
   },
   {
     path: "/404",
     name: "404",
-    component: AsyncComponent(() => import('../pages/404')),
+    component: AsyncComponent(() => import('@/pages/404')),
     auth: false
   },
 ];

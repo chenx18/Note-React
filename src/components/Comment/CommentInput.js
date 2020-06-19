@@ -23,7 +23,8 @@ class CommentInput extends Component {
     if(this.props.onSubmit) {
       const {userName, contents} = this.state;
       let params = {userName, contents};
-      this.props.onSubmit(params);
+      // 子组件中通过 this.props.属性名 访问对应变量或方法
+      this.props.onSubmit(params); 
     }
   }
   //

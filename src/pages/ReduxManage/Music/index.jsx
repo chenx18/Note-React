@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MusicListUI from './musicListUI';
 
 import MarkComponents from '@/components/markComponents'
-import md from '@/assets/notes/11.React-redux.md'
+import md from '@/assets/notes/10.状态管理（redux）/2.React-redux.md'
 
 
 class ReactRedux extends Component {
