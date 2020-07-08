@@ -5,19 +5,11 @@
 /.pnp
 .pnp.js
 
-/webReact_V2/node_modules
-/webReact_V2/build
-/webReact_V2/coverage
-/webReact_V2/.pnp
-
-/react-knowledge-master/node_modules
-/react-knowledge-master/build
-/react-knowledge-master/coverage
-/react-knowledge-master/.pnp
-
 # testing
 /coverage
 
+# production
+/build
 
 # misc
 .DS_Store

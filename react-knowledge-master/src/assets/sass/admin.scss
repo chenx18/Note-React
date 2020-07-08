@@ -1,0 +1,78 @@
+//登录页
+.login-wrap{
+  min-height: 100%;
+  background: url("~@imgs/background.svg");
+
+  .title{
+    padding-top: 100px;
+    padding-bottom: 30px;
+    font-size: 25px;
+  }
+
+  .con{
+    width: 360px;
+  }
+}
+
+//头部
+.header{
+  height: 60px;
+  line-height: 60px;
+  background: #1890FF;
+  color: #fff;
+
+  .logo{
+    width: 200px;
+
+    img{
+      width: 32px;
+      height: 32px;
+      margin: 15px 10px 0 25px;
+    }
+  }
+
+  .bar{
+    width: calc(100% - 200px);
+
+    .bar-btn{
+      width: 25px;
+      height: 25px;
+      margin-top: 18px;
+      margin-left: 20px;
+      line-height: 25px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .user{
+      padding: 0 15px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all .3s;
+
+      img{
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        margin-right: 10px;
+      }
+    }
+    .user:hover{
+      background: hsla(0,0%,100%,.3);
+    }
+  }
+}
+//主体
+.body{
+  height: calc(100% - 60px);
+
+  .left{
+    width: 200px;
+    overflow-y: auto;
+  }
+
+  .right{
+    background: #f0f2f5;
+    overflow-y: auto;
+  }
+}
